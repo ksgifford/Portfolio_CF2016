@@ -1,0 +1,46 @@
+body {
+  padding: 1em;
+  background-color: black;
+}
+
+.template {
+  display: none;
+}
+
+.prjInfo {
+  text-align: left;
+  color: #777;
+}
+
+article {
+  padding-left: 1em;
+  padding-right: 1em;
+  background-color: white;
+  opacity: 0.8;
+}
+
+main {
+  margin: auto;
+  width: 80%;
+}
+
+header {
+  text-align: center;
+  background-color: white;
+  opacity: 0.8;
+}
+
+footer {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  background-color: white;
+  opacity: 0.8;
+}
+
+nav {
+  padding: 0.5em;
+  margin: auto;
+  background-color: white;
+  opacity: 0.8;
+}

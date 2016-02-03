@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Kevin Gifford - Professional Projects</title>
     <link rel="stylesheet" href="vendor/styles/normalize.css">
+    <link rel="stylesheet" href="styles/icons.css">
     <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
@@ -14,17 +15,19 @@
           Kevin Gifford
         </h1>
         <p>Visual arts and web development</p>
-      </header>
-      <nav>
         <ul>
-          <li>About (Coming Soon)</li>
-          <li>Projects</li>
-          <li><a href="https://twitter.com/Blackwatch03" target="_blank">Twitter</a></li>
-          <li><a href="https://www.linkedin.com/in/ksgifford" target="_blank">LinkedIn</a></li>
-          <li><a href="https://github.com/ksgifford" target="_blank">GitHub</a></li>
+          <li><a href="https://twitter.com/Blackwatch03" target="_blank"><span class="icon-twitter"></span> Twitter</a></li>
+          <li><a href="https://www.linkedin.com/in/ksgifford" target="_blank"><span class="icon-linkedin"> LinkedIn</a></li>
+          <li><a href="https://github.com/ksgifford" target="_blank"><span class="icon-github"></span> GitHub</a></li>
+        </ul>
+      </header>
+      <nav class="main-nav">
+        <ul>
+          <li class="tab" data-content="about"><a href="#"><span class="icon-rocket"> About</a></li>
+          <li class="tab" data-content="projects"><a href="#"><span class="icon-home"> Projects</a></li>
         </ul>
       </nav>
-      <section id="projects">
+      <section id="projects" class="tab-content">
         <article class="template" category="null">
           <header>
             <h2>Title</h2>
@@ -35,6 +38,16 @@
           <section class="prjDesc"></section>
         </article>
       </section>
+      <section id="about" class="tab-content">
+        <article>
+          <header>
+            <h1>
+              About Me
+            </h1>
+          </header>
+          <p>I am a web developer specializing in geospatial analysis and user design. Before coming to the world of software development, I had a ten-year career as an urban planner and public policy consultant. My goal is to build tools and apps that provide users with rich, data-driven experiences to solve real-world problems.</p><br></br>
+        </article>
+      </section>
     </main>
     <footer>
       &copy; 2016 Kevin Gifford
@@ -43,6 +56,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script type="text/javascript" src="scripts/projList.js"> </script>
     <script type="text/javascript" src="scripts/projects.js"> </script>
+    <script type="text/javascript" src="scripts/viewManager.js"> </script>
 
   </body>
 </html>

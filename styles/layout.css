@@ -1,0 +1,54 @@
+header {
+  text-align: left;
+  max-width: 100%;
+}
+
+.thumbnail {
+  display: none;
+}
+
+.heading-group {
+  max-width: 80%;
+}
+
+.site-header {
+  padding: 1%;
+  margin-bottom: 1%;
+  max-width: 100%;
+  background-color: white;
+  opacity: 0.8;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+footer {
+  max-width: 100%;
+  margin-top: 1em;
+  padding: 0.5%;
+  text-align: center;
+  background-color: white;
+  opacity: 0.8;
+}
+
+nav {
+  text-align: left;
+}
+
+@media screen and (min-width: 640px) {
+
+  .heading-group {
+    max-width: 100%;
+  }
+
+  .thumbnail {
+    display: block;
+    margin-left: 20%;
+    margin-right: 20%;
+    max-width: 60%;
+  }
+
+}

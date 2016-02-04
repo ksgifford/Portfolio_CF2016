@@ -1,32 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     <title>Kevin Gifford - Professional Projects</title>
     <link rel="stylesheet" href="vendor/styles/normalize.css">
     <link rel="stylesheet" href="styles/icons.css">
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/modules.css">
   </head>
   <body>
-    <div id="background"></div>
-    <main>
-      <header>
+    <header class="site-header clearfix">
+      <section class="heading-group">
         <h1>
           Kevin Gifford
         </h1>
         <p>Visual arts and web development</p>
-        <ul>
-          <li><a href="https://twitter.com/Blackwatch03" target="_blank"><span class="icon-twitter"></span> Twitter</a></li>
-          <li><a href="https://www.linkedin.com/in/ksgifford" target="_blank"><span class="icon-linkedin"> LinkedIn</a></li>
-          <li><a href="https://github.com/ksgifford" target="_blank"><span class="icon-github"></span> GitHub</a></li>
-        </ul>
-      </header>
+      </section>
       <nav class="main-nav">
+        <span class="icon-menu"></span>
         <ul>
-          <li class="tab" data-content="about"><a href="#"><span class="icon-rocket"> About</a></li>
-          <li class="tab" data-content="projects"><a href="#"><span class="icon-home"> Projects</a></li>
+          <li class="tab" data-content="about"><a href="#" class="icon-user"> About</a></li>
+          <li class="tab" data-content="projects"><a href="#" class="icon-home"> Projects</a></li>
+          <li><a href="https://twitter.com/Blackwatch03" target="_blank" class="icon-twitter"> Twitter</a></li>
+          <li><a href="https://www.linkedin.com/in/ksgifford" target="_blank" class="icon-linkedin"> LinkedIn</a></li>
+          <li><a href="https://github.com/ksgifford" target="_blank" class="icon-github"> GitHub</a></li>
         </ul>
       </nav>
+    </header>
+    <main>
       <section id="projects" class="tab-content">
         <article class="template" category="null">
           <header>
@@ -41,11 +44,11 @@
       <section id="about" class="tab-content">
         <article>
           <header>
-            <h1>
+            <h2>
               About Me
-            </h1>
+            </h2>
           </header>
-          <p>I am a web developer specializing in geospatial analysis and user design. Before coming to the world of software development, I had a ten-year career as an urban planner and public policy consultant. My goal is to build tools and apps that provide users with rich, data-driven experiences to solve real-world problems.</p><br></br>
+          <p>I am a web developer specializing in geospatial analysis and user design. Before coming to the world of software development, I had a ten-year career as an urban planner and public policy consultant. My goal is to build tools and apps that provide users with rich, data-driven experiences to solve real-world problems.</p>
         </article>
       </section>
     </main>

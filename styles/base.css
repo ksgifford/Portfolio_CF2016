@@ -1,0 +1,43 @@
+body {
+  background-color: #0A384C;
+}
+
+img {
+  max-width: 100%;
+  margin-left: 1%;
+}
+
+a:link {
+  color: #247499;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #4C2B02;
+}
+
+article {
+  padding: 2%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  max-width: 90%;
+  height: auto;
+  background-color: white;
+  opacity: 0.8;
+}
+
+main {
+
+  max-width: 100%;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0em;
+}
+
+h2 {
+  margin: 0em;
+}

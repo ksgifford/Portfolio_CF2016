@@ -22,7 +22,7 @@ Project.prototype.toHtml = function() {
   $newProject.find('time[pubdate]').attr('title', this.completeDate);
   $newProject.find('time').html('about ' + parseInt((new Date() - new Date(this.completeDate))/60/60/24/1000) + ' days ago');
 
-  $newProject.append('<br></br>');
+  // $newProject.append('<br></br>');
 
   $newProject.removeClass('template');
 

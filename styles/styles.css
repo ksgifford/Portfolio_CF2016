@@ -1,6 +1,6 @@
 body {
   padding: 1em;
-  background-color: black;
+  background-color: #0A384C;
 }
 
 .template {
@@ -12,9 +12,19 @@ body {
   color: #777;
 }
 
+a:link {
+  color: #247499;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #4C2B02;
+}
+
 article {
   padding-left: 1em;
   padding-right: 1em;
+  padding-top: 1em;
   background-color: white;
   opacity: 0.8;
 }
@@ -30,6 +40,16 @@ header {
   opacity: 0.8;
 }
 
+header ul {
+  list-style: none;
+}
+
+header li {
+  display: inline;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 footer {
   width: 80%;
   margin: auto;
@@ -43,4 +63,13 @@ nav {
   margin: auto;
   background-color: white;
   opacity: 0.8;
+  text-align: center;
+}
+
+nav li {
+  display: inline;
+  padding-left: 80px;
+  padding-right: 80px;
+  text-align: center;
+  font-size: 24px;
 }

@@ -4,29 +4,20 @@ function Project(options) {
   this.title = options.title;
   this.category = options.category;
   this.client = options.client;
+  this.clientUrl = options.clientUrl;
   this.completeDate = options.completeDate;
   this.webLink = options.webLink;
   this.body = options.body;
 }
 
 Project.prototype.toHtml = function() {
-  var $newProject = $('article.template').clone();
+  var source = $('#prj-template').text();
+  var template = Handlebars.compile(source);
 
-  $newProject.attr('category', this.category);
-  $newProject.find('header h2').text(this.title);
-  $newProject.find('.prjDesc').html(this.body);
-  $newProject.find('.prjInfo a').text(this.client);
-  $newProject.find('.prjInfo a').attr('href', this.webLink);
+  this.daysAgo = parseInt((new Date() - new Date(this.completeDate))/60/60/24/1000);
+  this.completeStatus = this.completeDate ? 'Completed about '+ this.daysAgo + ' days ago' : 'DRAFT';
 
-  $newProject.find('time[datetime]').text(this.completeDate);
-  $newProject.find('time[pubdate]').attr('title', this.completeDate);
-  $newProject.find('time').html('about ' + parseInt((new Date() - new Date(this.completeDate))/60/60/24/1000) + ' days ago');
-
-  // $newProject.append('<br></br>');
-
-  $newProject.removeClass('template');
-
-  return $newProject;
+  return template(this);
 }
 
 projList.sort(function(a,b) {

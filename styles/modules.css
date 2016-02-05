@@ -4,11 +4,25 @@
 
 .prjInfo {
   text-align: left;
+  font-family: 'Open Sans Condensed', sans-serif;
+  margin-bottom: 1%;
   color: #777;
 }
 
 .heading-group {
   float: left;
+}
+
+.heading-group h1 {
+  font-size: 2.618em;
+  letter-spacing: 0.1em;
+  word-spacing: 0.2em;
+  font-family: 'Alegreya Sans SC', sans-serif;
+}
+
+.heading-group h2 {
+  font-weight: 300;
+  font-family: 'Open Sans Condensed', sans-serif;
 }
 
 .main-nav ul {
@@ -52,5 +66,17 @@
   .heading-group {
     float: none;
     text-align: center;
+  }
+
+  .heading-group h1 {
+    font-size: 4.236em;
+    letter-spacing: 0.15em;
+    word-spacing: 0.25em;
+    font-family: 'Alegreya Sans SC', sans-serif;
+  }
+
+  .heading-group h2 {
+    font-weight: 300;
+    font-family: 'Open Sans Condensed', sans-serif;
   }
 }

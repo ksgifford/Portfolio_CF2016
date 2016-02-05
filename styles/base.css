@@ -1,5 +1,6 @@
 body {
   background-color: #0A384C;
+  font-family: 'Catamaran', sans-serif;
 }
 
 img {
@@ -29,15 +30,19 @@ article {
 }
 
 main {
-
   max-width: 100%;
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 2.618em;
   margin: 0em;
 }
 
 h2 {
+  font-size: 1.618em;
   margin: 0em;
+}
+
+p {
+  font-size: 1em;
 }

@@ -1,22 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta name="viewport" content="width=device-width" initial-scale="1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     <title>Kevin Gifford - Professional Projects</title>
+    <link href='https://fonts.googleapis.com/css?family=Catamaran|Alegreya+Sans+SC:700|Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="vendor/styles/normalize.css">
     <link rel="stylesheet" href="styles/icons.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
+
+    <script type="text/x-handlebars-template" id="prj-template">
+      <article class="entry" data-category="{{category}}" data-client="{{client}}">
+        <header>
+          <h2><a href="{{webLink}}">{{title}}</a></h2>
+          <div class="prjInfo">
+            Prepared for <a href="{{clientUrl}}">{{client}}</a> || {{completeStatus}}.
+          </div>
+        </header>
+        <section class="prjDesc">{{{body}}}</section>
+      </article>
+    </script>
+
   </head>
+
   <body>
     <header class="site-header clearfix">
       <section class="heading-group">
         <h1>
           Kevin Gifford
         </h1>
-        <p>Visual arts and web development</p>
+        <h2>Web Development and Visual Arts</h2>
       </section>
       <nav class="main-nav">
         <span class="icon-menu"></span>
@@ -30,17 +45,7 @@
       </nav>
     </header>
     <main>
-      <section id="projects" class="tab-content">
-        <article class="template" category="null">
-          <header>
-            <h2>Title</h2>
-            <div class="prjInfo">
-              Prepared for <a href="">Client Name</a> || Completed <time pubdate datetime="2000-01-01">Complete Date</time>
-            </div>
-          </header>
-          <section class="prjDesc"></section>
-        </article>
-      </section>
+      <section id="projects" class="tab-content"></section>
       <section id="about" class="tab-content">
         <article>
           <header>
@@ -57,6 +62,7 @@
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
     <script type="text/javascript" src="scripts/projList.js"> </script>
     <script type="text/javascript" src="scripts/projects.js"> </script>
     <script type="text/javascript" src="scripts/viewManager.js"> </script>

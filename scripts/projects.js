@@ -36,6 +36,27 @@ Project.fetchAll = function() {
     localStorage.rawData = (JSON.stringify(data));
     Project.loadAll(JSON.parse(localStorage.rawData));
     pageView.initIndex();
-    console.log(localStorage.rawData);
   })
+}
+
+Project.localCheck = function() {
+  if (localStorage.rawData) {
+    $.ajax({
+      type: 'HEAD',
+      url: 'data/prjData.json',
+      success: function(data, message, xhr) {
+        console.log(xhr);
+        var eTag = xhr.getResponseHeader('eTag');
+        if(!localStorage.eTag || eTag != localStorage.eTag) {
+          localStorage.eTag = eTag;
+          Project.fetchAll();
+        } else {
+          Project.loadAll(JSON.parse(localStorage.rawData));
+          pageView.initIndex();
+        }
+      }
+    })
+  } else {
+    Project.fetchAll();
+  };
 }

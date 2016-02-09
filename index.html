@@ -21,7 +21,7 @@
         </header>
         <section class="prjContainer">
           <div class="prjDesc">{{body}}</div>
-          <div class="thumbnail"><img src="{{imageUrl}}"></div>
+          <img class="thumbnail" src="{{imageUrl}}">
         </section>
       </article>
     </script>
@@ -70,7 +70,7 @@
     <script type="text/javascript" src="scripts/projects.js"> </script>
     <script type="text/javascript" src="scripts/viewManager.js"> </script>
     <script>
-      Project.fetchAll();
+      Project.localCheck();
     </script>
 
   </body>

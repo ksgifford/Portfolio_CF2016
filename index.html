@@ -19,7 +19,10 @@
             Prepared for <a href="{{clientUrl}}">{{client}}</a> || {{completeStatus}}.
           </div>
         </header>
-        <section class="prjDesc">{{{body}}}</section>
+        <section class="prjContainer">
+          <div class="prjDesc">{{body}}</div>
+          <div class="thumbnail"><img src="{{imageUrl}}"></div>
+        </section>
       </article>
     </script>
 
@@ -63,9 +66,12 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
-    <script type="text/javascript" src="scripts/projList.js"> </script>
+    <!-- <script type="text/javascript" src="scripts/projList.js"> </script> -->
     <script type="text/javascript" src="scripts/projects.js"> </script>
     <script type="text/javascript" src="scripts/viewManager.js"> </script>
+    <script>
+      Project.fetchAll();
+    </script>
 
   </body>
 </html>

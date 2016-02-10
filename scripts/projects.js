@@ -1,5 +1,3 @@
-var projects = [];
-
 function Project(options) {
   this.title = options.title;
   this.category = options.category;
@@ -8,7 +6,10 @@ function Project(options) {
   this.completeDate = options.completeDate;
   this.webLink = options.webLink;
   this.body = options.body;
+  this.imageUrl = options.imageUrl;
 }
+
+Project.all = [];
 
 Project.prototype.toHtml = function() {
   var source = $('#prj-template').text();
@@ -20,14 +21,42 @@ Project.prototype.toHtml = function() {
   return template(this);
 }
 
-projList.sort(function(a,b) {
-  return (new Date(b.completeDate)) - (new Date(a.completeDate));
-});
+Project.loadAll = function(rawData) {
+  rawData.sort(function(a,b) {
+    return (new Date(b.completeDate)) - (new Date(a.completeDate));
+  })
 
-projList.forEach(function(ele) {
-  projects.push(new Project(ele));
-});
+  rawData.forEach(function(ele) {
+    Project.all.push(new Project(ele));
+  })
+}
 
-projects.forEach(function(a){
-  $('#projects').append(a.toHtml())
-});
+Project.fetchAll = function() {
+  $.getJSON('data/prjData.json', function(data) {
+    localStorage.rawData = (JSON.stringify(data));
+    Project.loadAll(JSON.parse(localStorage.rawData));
+    pageView.initIndex();
+  })
+}
+
+Project.localCheck = function() {
+  if (localStorage.rawData) {
+    $.ajax({
+      type: 'HEAD',
+      url: 'data/prjData.json',
+      success: function(data, message, xhr) {
+        console.log(xhr);
+        var eTag = xhr.getResponseHeader('eTag');
+        if(!localStorage.eTag || eTag != localStorage.eTag) {
+          localStorage.eTag = eTag;
+          Project.fetchAll();
+        } else {
+          Project.loadAll(JSON.parse(localStorage.rawData));
+          pageView.initIndex();
+        }
+      }
+    })
+  } else {
+    Project.fetchAll();
+  };
+}

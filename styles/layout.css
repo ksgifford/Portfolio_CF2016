@@ -44,6 +44,10 @@ nav {
     max-width: 100%;
   }
 
+  .prjDesc {
+    margin-bottom: 1%;
+  }
+
   .thumbnail {
     border-style: solid;
     border-width: 2px;

@@ -9,4 +9,10 @@ pageView.navHandler = function() {
   $('.main-nav .tab:first').click();
 };
 
+pageView.initIndex = function() {
+  Project.all.forEach(function(a){
+    $('#projects').append(a.toHtml());
+  })
+};
+
 pageView.navHandler();

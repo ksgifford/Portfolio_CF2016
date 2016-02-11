@@ -26,6 +26,16 @@
       </article>
     </script>
 
+    <script type="text/x-handlebars-template" id="footer-template">
+      <div class="stats">
+        <span class="icon-cog"></span>
+        <ul>
+          <li>Number of Projects: {{prjCount}}</li>
+          <li>Project Description Word Count: {{numWords}}</li>
+        </ul>
+      </div>
+    </script>
+
   </head>
 
   <body>
@@ -60,13 +70,12 @@
         </article>
       </section>
     </main>
-    <footer>
-      &copy; 2016 Kevin Gifford
+    <footer id="foot">
+      <section>&copy; 2016 Kevin Gifford</section>
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
-    <!-- <script type="text/javascript" src="scripts/projList.js"> </script> -->
     <script type="text/javascript" src="scripts/projects.js"> </script>
     <script type="text/javascript" src="scripts/viewManager.js"> </script>
     <script>

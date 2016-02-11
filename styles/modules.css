@@ -47,6 +47,25 @@
   font-size: 2em;
 }
 
+.icon-cog {
+  position: absolute;
+  right: 0.5em;
+  top: 0.5em;
+  font-size: 1em;
+}
+
+.stats li {
+  display: none;
+  list-style: none;
+  text-align: right;
+  margin-right: 0.5em;
+  font-size: 0.75em;
+}
+
+.stats:hover li {
+  display: block;
+}
+
 @media screen and (min-width: 640px) {
   .icon-menu {
     display: none;

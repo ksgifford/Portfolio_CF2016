@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
 
+    <!--Handlebars templates for the project descriptions and the footer stat data, respectively. -->
     <script type="text/x-handlebars-template" id="prj-template">
       <article class="entry" data-category="{{category}}" data-client="{{client}}">
         <header>
@@ -25,7 +26,6 @@
         </section>
       </article>
     </script>
-
     <script type="text/x-handlebars-template" id="footer-template">
       <div class="stats">
         <span class="icon-cog"></span>
@@ -35,9 +35,9 @@
         </ul>
       </div>
     </script>
-
   </head>
 
+  <!--Begin main page body.-->
   <body>
     <header class="site-header clearfix">
       <section class="heading-group">
@@ -57,8 +57,9 @@
         </ul>
       </nav>
     </header>
+
     <main>
-      <section id="projects" class="tab-content"></section>
+      <section id="projects" class="tab-content"></section> <!--Container section for dynamically added project descriptions-->
       <section id="about" class="tab-content">
         <article>
           <header>
@@ -70,6 +71,7 @@
         </article>
       </section>
     </main>
+    
     <footer id="foot">
       <section>&copy; 2016 Kevin Gifford</section>
     </footer>

@@ -1,14 +1,9 @@
 (function(module) {
 
-  function Project(options) {
-    this.title = options.title;
-    this.category = options.category;
-    this.client = options.client;
-    this.clientUrl = options.clientUrl;
-    this.completeDate = options.completeDate;
-    this.webLink = options.webLink;
-    this.body = options.body;
-    this.imageUrl = options.imageUrl;
+  function Project(opts) {
+    Object.keys(opts).forEach(function(e, index, keys) {
+      this[e] = opts[e];
+    },this);
   }
 
   Project.all = [];
@@ -44,7 +39,6 @@
     rawData.sort(function(a,b) {
       return (new Date(b.completeDate)) - (new Date(a.completeDate));
     })
-
     rawData.map(function(ele) {
       return Project.all.push(new Project(ele));
     })
@@ -80,5 +74,4 @@
   }
 
   module.Project = Project;
-
 }(window));

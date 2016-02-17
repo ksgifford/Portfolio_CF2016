@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
 
-    <!--Handlebars templates for the project descriptions and the footer stat data, respectively. -->
     <script type="text/x-handlebars-template" id="prj-template">
       <article class="entry" data-category="{{category}}" data-client="{{client}}">
         <header>
@@ -26,6 +25,7 @@
         </section>
       </article>
     </script>
+
     <script type="text/x-handlebars-template" id="footer-template">
       <div class="stats">
         <span class="icon-cog"></span>
@@ -35,9 +35,9 @@
         </ul>
       </div>
     </script>
+
   </head>
 
-  <!--Begin main page body.-->
   <body>
     <header class="site-header clearfix">
       <section class="heading-group">
@@ -49,17 +49,16 @@
       <nav class="main-nav">
         <span class="icon-menu"></span>
         <ul>
-          <li class="tab" data-content="about"><a href="#" class="icon-user"> About</a></li>
-          <li class="tab" data-content="projects"><a href="#" class="icon-home"> Projects</a></li>
+          <li class="tab" data-content="about"><a href="/about" class="icon-user"> About</a></li>
+          <li class="tab" data-content="projects"><a href="/" class="icon-home"> Projects</a></li>
           <li><a href="https://twitter.com/Blackwatch03" target="_blank" class="icon-twitter"> Twitter</a></li>
           <li><a href="https://www.linkedin.com/in/ksgifford" target="_blank" class="icon-linkedin"> LinkedIn</a></li>
           <li><a href="https://github.com/ksgifford" target="_blank" class="icon-github"> GitHub</a></li>
         </ul>
       </nav>
     </header>
-
     <main>
-      <section id="projects" class="tab-content"></section> <!--Container section for dynamically added project descriptions-->
+      <section id="projects" class="tab-content"></section>
       <section id="about" class="tab-content">
         <article>
           <header>
@@ -71,15 +70,19 @@
         </article>
       </section>
     </main>
-    
     <footer id="foot">
       <section>&copy; 2016 Kevin Gifford</section>
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+    <script src="/vendor/scripts/page.js"></script>
     <script type="text/javascript" src="scripts/projects.js"> </script>
     <script type="text/javascript" src="scripts/viewManager.js"> </script>
+    <script src="scripts/aboutController.js"></script>
+    <script src="scripts/projectsController.js"></script>
+    <script src="scripts/routes.js"></script>
+
     <script>
       Project.localCheck();
     </script>

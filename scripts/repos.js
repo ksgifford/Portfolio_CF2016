@@ -3,23 +3,18 @@
   repos.all = [];
 
   repos.requestData = function(callback) {
-    $.ajax({
-      url: 'https://api.github.com/users/ksgifford/repos' +
-            '?per_page=5&sort=updated',
-      type: 'GET',
-      headers: {'Authorization': 'token ' + gitHubToken},
-      success: function(data, message, xhr) {
+    $.get('/github/users/ksgifford/repos?per_page=10&sort=created:desc')
+      .done(function(data, message, xhr) {
         repos.all = data;
-        console.log(repos.all);
-      }
-    }).done(callback);
-  };
+      })
+      .done(callback)
+    };
 
   repos.with = function(attr) {
     return repos.all.filter(function(repo) {
       return repo[attr];
     });
-  };
+  }
 
   repos.toHtml = function(repo) {
     var template = Handlebars.compile($('#github-template').text());

@@ -10,9 +10,9 @@
       .done(callback)
     };
 
-  repos.with = function(attr) {
+  repos.without = function(attr, value, callback) {
     return repos.all.filter(function(repo) {
-      return repo[attr];
+      return repo[attr] != value;
     });
   }
 
